@@ -1,0 +1,51 @@
+# Node.js / TypeScript
+node_modules/
+dist/
+build/
+.cache/
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Vite
+dist-client/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*.suo
+
+# pnpm
+.pnpm-store/
+
+# Playwright (E2E)
+playwright-report/
+test-results/
+
+# Temp / uploads (never commit audio files)
+tmp/
+uploads/
+*.webm
+*.wav
+*.mp3
+*.mp4

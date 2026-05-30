@@ -1,0 +1,38 @@
+{
+  "name": "voiceui",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Voice AI to UI design — speak your UI, get live React component previews",
+  "scripts": {
+    "dev": "concurrently \"pnpm dev:client\" \"pnpm dev:server\"",
+    "dev:client": "pnpm --filter client dev",
+    "dev:server": "pnpm --filter server dev",
+    "build": "pnpm --filter client build && pnpm --filter server build",
+    "test": "pnpm --filter client test && pnpm --filter server test",
+    "test:client": "pnpm --filter client test",
+    "test:server": "pnpm --filter server test",
+    "test:watch": "concurrently \"pnpm --filter client test:watch\" \"pnpm --filter server test:watch\"",
+    "test:coverage": "pnpm --filter client test:coverage && pnpm --filter server test:coverage",
+    "lint": "eslint . --ext .ts,.tsx --max-warnings 0",
+    "format": "prettier --write .",
+    "typecheck": "pnpm --filter client typecheck && pnpm --filter server typecheck"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
+  },
+  "pnpm": {
+    "workspaces": [
+      "src/client",
+      "src/server"
+    ]
+  }
+}
